@@ -18,7 +18,7 @@ function IndexPage(props: React.FC<PageProps>) {
           <span className="text-7xl text-blue">L</span>
           <span className="text-7xl text-pink">O</span>
           <span className="text-7xl text-green">C</span>
-          <span className="text-7xl text-pink">K</span>
+          <span className="text-7xl text-purple">K</span>
           <span className="text-7xl"> </span>
           <span className="text-7xl text-orange">P</span>
           <span className="text-7xl text-blue">A</span>
