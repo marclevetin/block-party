@@ -52,7 +52,10 @@ function IndexPage(props: React.FC<PageProps>) {
           <div>
             <h2 className="mt-4 text-3xl">When</h2>
             <p className="">
-              <Hyperlink href="https://www.bedfordma.gov/269/Bedford-Day">
+              <Hyperlink
+                externalSite={true}
+                href="https://www.bedfordma.gov/269/Bedford-Day"
+              >
                 Bedford Day
               </Hyperlink>{" "}
               - <time dateTime="2023-09-23">September 23, 2023</time> from{" "}
@@ -62,7 +65,10 @@ function IndexPage(props: React.FC<PageProps>) {
             <h2 className="mt-4 text-3xl">Where</h2>
             <p className="">
               In front of{" "}
-              <Hyperlink href="https://goo.gl/maps/ZXCJebVCKc3kvcpZA">
+              <Hyperlink
+                externalSite={true}
+                href="https://goo.gl/maps/ZXCJebVCKc3kvcpZA"
+              >
                 12 Fern Way
               </Hyperlink>
               .
@@ -83,13 +89,19 @@ function IndexPage(props: React.FC<PageProps>) {
             <h2 className="mt-4 text-3xl">Get Involved!</h2>
             <ol className="list-decimal list-inside">
               <li>
-                <Hyperlink href="https://docs.google.com/document/d/1KDE_rM-pTY6vj1_pJXR8JHmHVGXw5h4eUVT74f5zSLQ/edit">
+                <Hyperlink
+                  externalSite={true}
+                  href="https://docs.google.com/document/d/1KDE_rM-pTY6vj1_pJXR8JHmHVGXw5h4eUVT74f5zSLQ/edit"
+                >
                   Sign up to bring something.
                 </Hyperlink>
               </li>
               <li>
                 Get updates in our{" "}
-                <Hyperlink href="https://groups.google.com/my-groups">
+                <Hyperlink
+                  externalSite={true}
+                  href="https://groups.google.com/my-groups"
+                >
                   Google Group
                 </Hyperlink>{" "}
                 with group name:

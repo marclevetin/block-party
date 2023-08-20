@@ -2,10 +2,12 @@ import * as React from "react";
 
 type HyperlinkProps = {
   href: string;
+  externalSite?: boolean;
 };
 
 function Hyperlink({
   children,
+  externalSite = false,
   href,
 }: React.PropsWithChildren<HyperlinkProps>) {
   return (
@@ -15,7 +17,9 @@ function Hyperlink({
       target="_blank"
     >
       {children}
-      <span className="sr-only">This link opens in a new window.</span>
+      {externalSite ? (
+        <span className="sr-only">This link opens in a new window.</span>
+      ) : null}
     </a>
   );
 }
