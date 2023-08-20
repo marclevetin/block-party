@@ -12,7 +12,7 @@ function Hyperlink({
 }: React.PropsWithChildren<HyperlinkProps>) {
   return (
     <a
-      className="underline text-blue hover:text-pink visited:text-purple"
+      className="underline text-blue hover:text-pink visited:text-purple dark:visited:text-orange dark:hover:text-pink"
       href={href}
       target="_blank"
     >

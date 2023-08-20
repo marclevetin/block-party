@@ -153,6 +153,7 @@ export function Head(props: HeadProps) {
               Richard Road, McMahon Road between Concord Road and JGMS, and
               Concord Road between Woodmoor Drive and McMahon Road."
       />
+      <body className="bg-white dark:bg-slate-800 text-slate-800 dark:text-zinc-200" />
     </>
   );
 }
