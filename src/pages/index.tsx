@@ -29,23 +29,28 @@ function IndexPage(props: React.FC<PageProps>) {
           <span className="text-2xl">Come Meet Your Neighbors!</span>
         </h1>
         <div className="container columns-1 gap-8 sm:columns-2">
-          <div className="-mt-4">
-            <h2 className="my-4 text-3xl">Who’s Invited</h2>
+          <div>
+            <h2 className="text-3xl">Who’s Invited</h2>
             <p className="">
               Everyone who lives on Fern Way, Woodmoor Drive, Winchester Drive,
               Richard Road, McMahon Road between Concord Road and JGMS, and
               Concord Road between Woodmoor Drive and McMahon Road.
             </p>
             <div className="flex flex-row justify-center items-center">
-              <StaticImage
-                alt="Map of streets included in the Block Party: Fern Way, Woodmoor Drive, Winchester Drive, Richard Road, a portion of McMahon Road, and a portion of Concord Road."
-                src="../images/block-party-map.jpg"
-                className="w-96 rounded-2xl"
-              />
+              <figure className="break-inside-avoid-column">
+                <StaticImage
+                  alt="Map of streets included in the Block Party: Fern Way, Woodmoor Drive, Winchester Drive, Richard Road, a portion of McMahon Road, and a portion of Concord Road."
+                  src="../images/block-party-map.jpg"
+                  className="w-96 rounded-2xl"
+                />
+                <figcaption className="text-zinc-400 text-center">
+                  Map of the Block Party neighborhood
+                </figcaption>
+              </figure>
             </div>
           </div>
           <div>
-            <h2 className="my-4 text-3xl">When</h2>
+            <h2 className="mt-4 text-3xl">When</h2>
             <p className="">
               <Hyperlink href="https://www.bedfordma.gov/269/Bedford-Day">
                 Bedford Day
@@ -54,7 +59,7 @@ function IndexPage(props: React.FC<PageProps>) {
               <time dateTime="2023-09-23T16:00">4pm</time> until{" "}
               <time dateTime="2023-09-23T20:00">8pm</time>.
             </p>
-            <h2 className=" my-4 text-3xl">Where</h2>
+            <h2 className="mt-4 text-3xl">Where</h2>
             <p className="">
               In front of{" "}
               <Hyperlink href="https://goo.gl/maps/ZXCJebVCKc3kvcpZA">
@@ -62,7 +67,20 @@ function IndexPage(props: React.FC<PageProps>) {
               </Hyperlink>
               .
             </p>
-            <h2 className=" my-4 text-3xl">Get Involved!</h2>
+            <h2 className="mt-4 text-3xl">How it works</h2>
+            <div className="space-y-4">
+              <p>
+                It's really easy. The Block Party is a neighborhood potluck. We
+                block off the road, folks bring themselves and something to eat
+                and drink. We order pizza just in case. Sometimes folks grill
+                hot dogs or chicken wings.
+              </p>
+              <p>Kids play. Adults talk.</p>
+              <p>
+                And at some point, folks head up to watch Bedford Day fireworks.
+              </p>
+            </div>
+            <h2 className="mt-4 text-3xl">Get Involved!</h2>
             <ol className="list-decimal list-inside">
               <li>
                 <Hyperlink href="https://docs.google.com/document/d/1KDE_rM-pTY6vj1_pJXR8JHmHVGXw5h4eUVT74f5zSLQ/edit">
