@@ -10,8 +10,10 @@ function IndexPage(props: React.FC<PageProps>) {
       <main className="flex flex-col justify-start items-center container mx-auto mb-8 columns-1">
         <StaticImage
           alt="Logo.  Houses in multiple colors"
+          className="mx-auto rounded-2xl"
+          layout="constrained"
+          placeholder="blurred"
           src="../images/houses.jpg"
-          className="mx-auto"
         />
         <h1 className="text-center my-4">
           <span className="text-7xl text-orange">B</span>
@@ -40,8 +42,10 @@ function IndexPage(props: React.FC<PageProps>) {
               <figure className="break-inside-avoid-column">
                 <StaticImage
                   alt="Map of streets included in the Block Party: Fern Way, Woodmoor Drive, Winchester Drive, Richard Road, a portion of McMahon Road, and a portion of Concord Road."
-                  src="../images/block-party-map.jpg"
                   className="w-96 rounded-2xl"
+                  layout="fixed"
+                  placeholder="blurred"
+                  src="../images/block-party-map.jpg"
                 />
                 <figcaption className="text-zinc-400 text-center">
                   Map of the Block Party neighborhood
