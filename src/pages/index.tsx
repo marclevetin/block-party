@@ -1,193 +1,102 @@
-import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import * as React from "react";
+import type { PageProps } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const doclistStyles = {
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
+import Hyperlink from "../components/Hyperlink";
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  display: `inline-block`,
-  marginBottom: 24,
-  marginRight: 12,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLinks = [
-  {
-    text: "TypeScript Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
-    color: "#8954A8",
-  },
-  {
-    text: "GraphQL Typegen Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
-    color: "#8954A8",
-  }
-]
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative" as "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-const IndexPage: React.FC<PageProps> = () => {
+function IndexPage(props: React.FC<PageProps>) {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={doclistStyles}>
-        {docLinks.map(doc => (
-          <li key={doc.url} style={docLinkStyle}>
-            <a
-              style={linkStyle}
-              href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
-            >
-              {doc.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <ul style={listStyles}>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  )
+    <React.Fragment>
+      <main className="flex flex-col justify-start items-center container mx-auto mb-8 columns-1">
+        <StaticImage
+          alt="Logo.  Houses in multiple colors"
+          src="../images/houses.jpg"
+          className="mx-auto"
+        />
+        <h1 className="text-center my-4">
+          <span className="text-7xl text-orange">B</span>
+          <span className="text-7xl text-blue">L</span>
+          <span className="text-7xl text-pink">O</span>
+          <span className="text-7xl text-green">C</span>
+          <span className="text-7xl text-pink">K</span>
+          <span className="text-7xl"> </span>
+          <span className="text-7xl text-orange">P</span>
+          <span className="text-7xl text-blue">A</span>
+          <span className="text-7xl text-pink">R</span>
+          <span className="text-7xl text-green">T</span>
+          <span className="text-7xl text-purple">Y</span>
+          <br />
+          <span className="text-2xl">Come Meet Your Neighbors!</span>
+        </h1>
+        <div className="container columns-1 gap-8 sm:columns-2">
+          <div className="-mt-4">
+            <h2 className="my-4 text-3xl">Who’s Invited</h2>
+            <p className="">
+              Everyone who lives on Fern Way, Woodmoor Drive, Winchester Drive,
+              Richard Road, McMahon Road between Concord Road and JGMS, and
+              Concord Road between Woodmoor Drive and McMahon Road.
+            </p>
+            <div className="flex flex-row justify-center items-center">
+              <StaticImage
+                alt="Map of streets included in the Block Party: Fern Way, Woodmoor Drive, Winchester Drive, Richard Road, a portion of McMahon Road, and a portion of Concord Road."
+                src="../images/block-party-map.jpg"
+                className="w-96 rounded-2xl"
+              />
+            </div>
+          </div>
+          <div>
+            <h2 className="my-4 text-3xl">When</h2>
+            <p className="">
+              <Hyperlink href="https://www.bedfordma.gov/269/Bedford-Day">
+                Bedford Day
+              </Hyperlink>{" "}
+              - <time dateTime="2023-09-23">September 23, 2023</time> from{" "}
+              <time dateTime="2023-09-23T16:00">4pm</time> until{" "}
+              <time dateTime="2023-09-23T20:00">8pm</time>.
+            </p>
+            <h2 className=" my-4 text-3xl">Where</h2>
+            <p className="">
+              In front of{" "}
+              <Hyperlink href="https://goo.gl/maps/ZXCJebVCKc3kvcpZA">
+                12 Fern Way
+              </Hyperlink>
+              .
+            </p>
+            <h2 className=" my-4 text-3xl">Get Involved!</h2>
+            <ol className="list-decimal list-inside">
+              <li>
+                <Hyperlink href="https://docs.google.com/document/d/1KDE_rM-pTY6vj1_pJXR8JHmHVGXw5h4eUVT74f5zSLQ/edit">
+                  Sign up to bring something.
+                </Hyperlink>
+              </li>
+              <li>
+                Get updates in our{" "}
+                <Hyperlink href="https://groups.google.com/my-groups">
+                  Google Group
+                </Hyperlink>{" "}
+                with group name:
+                <br />
+                <em>block-party-bedford-day</em>
+                <br /> (Not a member?{" "}
+                <Hyperlink href="mailto:block-party-bedford-day+subscribe@googlegroups.com">
+                  Join the group.
+                </Hyperlink>
+                )
+              </li>
+            </ol>
+          </div>
+        </div>
+      </main>
+      <footer className="flex flex-row justify-end">
+        <p className="text-zinc-400">
+          Web design by your friendly neighborhood Spiderman.{" "}
+          <Hyperlink href="http://www.freepik.com">
+            Background designed by Freepik.
+          </Hyperlink>
+        </p>
+      </footer>
+    </React.Fragment>
+  );
 }
 
-export default IndexPage
-
-export const Head: HeadFC = () => <title>Home Page</title>
+export default IndexPage;
