@@ -1,5 +1,5 @@
 import * as React from "react";
-import type { PageProps } from "gatsby";
+import type { HeadProps, PageProps } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Hyperlink from "../components/Hyperlink";
@@ -81,9 +81,12 @@ function IndexPage(props: React.FC<PageProps>) {
                 and drink. We order pizza just in case. Sometimes folks grill
                 hot dogs or chicken wings.
               </p>
-              <p>Kids play. Adults talk.</p>
+              <p>Kids play. Adults talk. Dogs bark.</p>
               <p>
                 And at some point, folks head up to watch Bedford Day fireworks.
+                Others stay behind to help clean up. And there's usually a last
+                minute scramble to get people to take home leftovers, because
+                it's hard for one family to eat 3 extra pizzas on their own.
               </p>
             </div>
             <h2 className="mt-4 text-3xl">Get Involved!</h2>
@@ -130,3 +133,19 @@ function IndexPage(props: React.FC<PageProps>) {
 }
 
 export default IndexPage;
+
+export function Head(props: HeadProps) {
+  return (
+    <>
+      <html lang="en" />
+      <title>Bedford Block Party - September 23, 2023 from 4-8pm</title>
+      <meta
+        name="description"
+        content="Website for the Block Party in Bedford, MA for everyone who lives on Fern Way, Woodmoor Drive, Winchester Drive,
+              Richard Road, McMahon Road between Concord Road and JGMS, and
+              Concord Road between Woodmoor Drive and McMahon Road."
+      />
+      <body className="bg-[url('../images/3299081.jpg')]" />
+    </>
+  );
+}
