@@ -16,7 +16,7 @@ function IndexPage(props: React.FC<PageProps>) {
           placeholder="blurred"
           src="../images/houses.jpg"
         />
-        <h1 className="text-center my-4">
+        <h1 className="text-center my-4 font-semibold">
           <span className="text-7xl text-orange">B</span>
           <span className="text-7xl text-blue">L</span>
           <span className="text-7xl text-pink">O</span>
@@ -29,11 +29,13 @@ function IndexPage(props: React.FC<PageProps>) {
           <span className="text-7xl text-green">T</span>
           <span className="text-7xl text-purple">Y</span>
           <br />
-          <span className="text-2xl">Come Meet Your Neighbors!</span>
+          <span className="text-2xl font-normal text-slate-500 dark:text-zinc-400">
+            Come Meet Your Neighbors!
+          </span>
         </h1>
         <div className="container columns-1 gap-8 sm:columns-2">
           <ColumnSection>
-            <h2 className="text-3xl">Who’s Invited</h2>
+            <h2 className="text-3xl font-medium">Who’s Invited</h2>
             <p className="">
               Everyone who lives on Fern Way, Woodmoor Drive, Winchester Drive,
               Richard Road, McMahon Road between Concord Road and JGMS, and
@@ -50,7 +52,7 @@ function IndexPage(props: React.FC<PageProps>) {
                   height={500}
                   width={500}
                 />
-                <figcaption className="text-zinc-400 text-center">
+                <figcaption className="text-slate-500 dark:text-zinc-400 text-center">
                   Map of the Block Party neighborhood
                 </figcaption>
               </figure>
@@ -58,7 +60,7 @@ function IndexPage(props: React.FC<PageProps>) {
           </ColumnSection>
           <div>
             <ColumnSection>
-              <h2 className="mt-4 text-3xl">When</h2>
+              <h2 className="mt-4 text-3xl font-medium">When</h2>
               <p className="">
                 <Hyperlink
                   externalSite={true}
@@ -72,7 +74,7 @@ function IndexPage(props: React.FC<PageProps>) {
               </p>
             </ColumnSection>
             <ColumnSection>
-              <h2 className="mt-4 text-3xl">Where</h2>
+              <h2 className="mt-4 text-3xl font-medium">Where</h2>
               <p className="">
                 In front of{" "}
                 <Hyperlink
@@ -85,7 +87,7 @@ function IndexPage(props: React.FC<PageProps>) {
               </p>
             </ColumnSection>
             <ColumnSection>
-              <h2 className="mt-4 text-3xl">How it works</h2>
+              <h2 className="mt-4 text-3xl font-medium">How it works</h2>
               <div className="space-y-4">
                 <p>
                   It's really easy. The Block Party is a neighborhood potluck.
@@ -104,7 +106,7 @@ function IndexPage(props: React.FC<PageProps>) {
               </div>
             </ColumnSection>
             <ColumnSection>
-              <h2 className="mt-4 text-3xl">Get Involved!</h2>
+              <h2 className="mt-4 text-3xl font-medium">Get Involved!</h2>
               <ol className="list-decimal list-inside">
                 <li>
                   <Hyperlink
@@ -149,9 +151,9 @@ export function Head(props: HeadProps) {
       <title>Bedford Block Party - September 23, 2023 from 4-8pm</title>
       <meta
         name="description"
-        content="Website for the Block Party in Bedford, MA for everyone who lives on Fern Way, Woodmoor Drive, Winchester Drive,
-              Richard Road, McMahon Road between Concord Road and JGMS, and
-              Concord Road between Woodmoor Drive and McMahon Road."
+        content="There's a Block Party in Bedford, MA for everyone who lives on Fern Way, 
+              Woodmoor Drive, Winchester Drive, Richard Road, McMahon Road between Concord 
+              Road and JGMS, and Concord Road between Woodmoor Drive and McMahon Road."
       />
       <body className="bg-white dark:bg-slate-800 text-slate-800 dark:text-zinc-200" />
     </>
