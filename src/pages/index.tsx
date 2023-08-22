@@ -138,6 +138,25 @@ function IndexPage(props: React.FC<PageProps>) {
           </div>
         </div>
       </main>
+      <footer className="px-4 flex flex-row justify-end">
+        <div className="space-y-1 flex flex-col items-end">
+          <button
+            className="underline text-blue hover:text-pink visited:text-purple dark:visited:text-orange dark:hover:text-pink"
+            onClick={() => {
+              const isDark =
+                document.documentElement.classList.contains("dark");
+              if (isDark) {
+                document.documentElement.classList.remove("dark");
+              } else {
+                document.documentElement.classList.add("dark");
+              }
+            }}
+          >
+            Toggle dark mode
+          </button>
+          <p className="italic">Web design by a friendly neighbor</p>
+        </div>
+      </footer>
     </React.Fragment>
   );
 }
@@ -147,7 +166,14 @@ export default IndexPage;
 export function Head(props: HeadProps) {
   return (
     <>
-      <html lang="en" />
+      <html
+        className={
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : ""
+        }
+        lang="en"
+      />
       <title>Bedford Block Party - September 23, 2023 from 4-8pm</title>
       <meta
         name="description"
