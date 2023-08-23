@@ -138,23 +138,29 @@ function IndexPage(props: React.FC<PageProps>) {
           </div>
         </div>
       </main>
-      <footer className="px-4 flex flex-row justify-end">
-        <div className="space-y-1 flex flex-col items-end">
-          <button
-            className="underline text-blue hover:text-pink visited:text-purple dark:visited:text-orange dark:hover:text-pink"
-            onClick={() => {
-              const isDark =
-                document.documentElement.classList.contains("dark");
-              if (isDark) {
-                document.documentElement.classList.remove("dark");
-              } else {
-                document.documentElement.classList.add("dark");
-              }
-            }}
-          >
-            Toggle dark mode
-          </button>
-          <p className="italic">Web design by a friendly neighbor</p>
+      <footer className="pt-1 bg-gradient-to-r from-orange via-blue via-pink via-green to-purple">
+        <div className="bg-white dark:bg-slate-800">
+          <div className="flex flex-row justify-end">
+            <div className="space-y-1 flex flex-col items-end p-1 px-4">
+              <button
+                className="underline text-blue hover:text-pink visited:text-purple dark:visited:text-orange dark:hover:text-pink"
+                onClick={() => {
+                  const isDark =
+                    document.documentElement.classList.contains("dark");
+                  if (isDark) {
+                    document.documentElement.classList.remove("dark");
+                  } else {
+                    document.documentElement.classList.add("dark");
+                  }
+                }}
+              >
+                Toggle dark mode
+              </button>
+              <p className="italic text-slate-500 dark:text-zinc-400">
+                Web design by a friendly neighbor
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
     </React.Fragment>
