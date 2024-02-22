@@ -174,8 +174,10 @@ export function Head(props: HeadProps) {
     <>
       <html
         className={
-          window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
+          typeof window !== "undefined"
+            ? window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : ""
             : ""
         }
         lang="en"
