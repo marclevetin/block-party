@@ -68,9 +68,9 @@ function IndexPage(props: React.FC<PageProps>) {
                 >
                   Bedford Day
                 </Hyperlink>{" "}
-                - <time dateTime="2023-09-23">September 23, 2023</time> from{" "}
-                <time dateTime="2023-09-23T16:00">4pm</time> until{" "}
-                <time dateTime="2023-09-23T20:00">8pm</time>.
+                - <time dateTime="2024-09-21">September 21, 2024</time> from{" "}
+                <time dateTime="2024-09-21T16:00">4pm</time> until{" "}
+                <time dateTime="2024-09-21T20:00">8pm</time>.
               </p>
             </ColumnSection>
             <ColumnSection>
@@ -182,7 +182,7 @@ export function Head(props: HeadProps) {
         }
         lang="en"
       />
-      <title>Bedford Block Party - September 23, 2023 from 4-8pm</title>
+      <title>Bedford Block Party - September 21, 2024 from 4-8pm</title>
       <meta
         name="description"
         content="There's a Block Party in Bedford, MA for everyone who lives on Fern Way, 
