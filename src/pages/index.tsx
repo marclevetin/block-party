@@ -9,9 +9,9 @@ function IndexPage(props: React.FC<PageProps>) {
   return (
     <React.Fragment>
       <main className="flex flex-col justify-start items-center container mx-auto mb-8 columns-1">
-        <div className="text-2xl bg-cyan-100">
+        {/* <div className="text-2xl bg-cyan-100">
           <span>Rain or shine!</span>
-        </div>
+        </div> */}
         <StaticImage
           alt="Logo.  Houses in multiple colors"
           className="mx-auto rounded-2xl"
