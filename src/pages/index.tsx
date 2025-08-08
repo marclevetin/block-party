@@ -9,6 +9,9 @@ function IndexPage(props: React.FC<PageProps>) {
   return (
     <React.Fragment>
       <main className="flex flex-col justify-start items-center container mx-auto mb-8 columns-1">
+        <div className="text-2xl bg-cyan-100">
+          <span>Rain or shine!</span>
+        </div>
         <StaticImage
           alt="Logo.  Houses in multiple colors"
           className="mx-auto rounded-2xl"
@@ -68,9 +71,9 @@ function IndexPage(props: React.FC<PageProps>) {
                 >
                   Bedford Day
                 </Hyperlink>{" "}
-                - <time dateTime="2024-09-21">September 21, 2024</time> from{" "}
-                <time dateTime="2024-09-21T16:00">4pm</time> until{" "}
-                <time dateTime="2024-09-21T20:00">8pm</time>.
+                - <time dateTime="2025-09-20">September 20, 2025</time> from{" "}
+                <time dateTime="2025-09-20T16:00">4pm</time> until{" "}
+                <time dateTime="2025-09-20T20:00">8pm</time>.
               </p>
             </ColumnSection>
             <ColumnSection>
@@ -96,6 +99,10 @@ function IndexPage(props: React.FC<PageProps>) {
                   grill hot dogs or chicken wings.
                 </p>
                 <p>Kids play. Adults talk. Dogs bark.</p>
+                <p>
+                  Rain or shine! If it's raining, people bring tents and we all
+                  hang out and stay relatively dry.
+                </p>
                 <p>
                   And at some point, folks head up to watch Bedford Day
                   fireworks. Others stay behind to help clean up. And there's
@@ -182,7 +189,7 @@ export function Head(props: HeadProps) {
         }
         lang="en"
       />
-      <title>Bedford Block Party - September 21, 2024 from 4-8pm</title>
+      <title>Bedford Block Party - September 20, 2025 from 4-8pm</title>
       <meta
         name="description"
         content="There's a Block Party in Bedford, MA for everyone who lives on Fern Way, 
